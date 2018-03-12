@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @product.user %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Likes:</strong>
+  <%= @product.likes %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Images:</strong>
+  <%= @product.images %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @product.video %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @product.category %>
+</p>
+
+<p>
+  <strong>Funding:</strong>
+  <%= @product.funding %>
+</p>
+
+<p>
+  <strong>False/true:</strong>
+  <%= @product.false/true %>
+</p>
+
+<p>
+  <strong>Goal amount:</strong>
+  <%= @product.goal_amount %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @product.due_date %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

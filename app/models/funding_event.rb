@@ -1,0 +1,2 @@
+class FundingEvent < ApplicationRecord
+end

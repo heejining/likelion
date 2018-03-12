@@ -1,0 +1,37 @@
+<%= form_with(model: funding_event, local: true) do |form| %>
+  <% if funding_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(funding_event.errors.count, "error") %> prohibited this funding_event from being saved:</h2>
+
+      <ul>
+      <% funding_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :funding_event_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.text_field :product_id, id: :funding_event_product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.text_field :amount, id: :funding_event_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :datetime %>
+    <%= form.datetime_select :datetime, id: :funding_event_datetime %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

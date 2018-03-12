@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @funding_event.user_id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @funding_event.product_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @funding_event.amount %>
+</p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @funding_event.datetime %>
+</p>
+
+<%= link_to 'Edit', edit_funding_event_path(@funding_event) %> |
+<%= link_to 'Back', funding_events_path %>
