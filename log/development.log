@@ -885,3 +885,1010 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.2ms)
 
 
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /home/ec2-user/environment/likelionslectur/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /home/ec2-user/environment/likelionslectur/config/initializers/new_framework_defaults.rb:21)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20180312055224)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/rails/db" for 73.97.202.120 at 2018-03-12 05:59:31 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x007f4db93bdfe0>):
+  
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/rails/db" for 73.97.202.120 at 2018-03-12 05:59:36 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.5) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.5) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /home/ec2-user/environment/likelionslectur/config/initializers/new_framework_defaults.rb:21)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+Started GET "/rails/db" for 73.97.202.120 at 2018-03-12 05:59:58 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.5) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.5) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /home/ec2-user/environment/likelionslectur/config/initializers/new_framework_defaults.rb:21)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20180311205924)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user" varchar, "name" varchar, "likes" integer, "description" varchar, "images" varchar, "video" varchar, "category" varchar, "funding" boolean, "goal_amount" float, "due_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180311205924"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateLikes (20180311210435)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "likes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "product_id" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180311210435"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFundingEvents (20180311210521)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "funding_events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "product_id" varchar, "amount" float, "datetime" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180311210521"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateUsers (20180312055224)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180312055224"]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-03-12 06:00:13.126120"], ["updated_at", "2018-03-12 06:00:13.126120"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/rails/db" for 73.97.202.120 at 2018-03-12 06:00:16 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x007f4db8b92460>):
+  
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/rails/db" for 73.97.202.120 at 2018-03-12 06:00:45 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsDb::DashboardController#index as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/shared/_header.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/shared/_sidebar.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/shared/_gems.html.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/shared/_footer.html.erb (4.1ms)
+Completed 200 OK in 156ms (Views: 154.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/db/tables/users/data" for 73.97.202.120 at 2018-03-12 06:00:46 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"users"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/shared/_exp_col.html.erb (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (29.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (10.6ms)
+  [1m[36m Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_sql.html.erb (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_data.html.erb (79.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/data.js.erb (82.7ms)
+Completed 200 OK in 109ms (Views: 86.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rails/db/tables/products/data" for 73.97.202.120 at 2018-03-12 06:00:48 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"products"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/shared/_exp_col.html.erb (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (14.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (19.3ms)
+  [1m[36m Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_sql.html.erb (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_data.html.erb (72.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/data.js.erb (75.3ms)
+Completed 200 OK in 102ms (Views: 78.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rails/db/tables/likes/data" for 73.97.202.120 at 2018-03-12 06:00:49 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"likes"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes"[0m
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/shared/_exp_col.html.erb (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (7.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (6.2ms)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_sql.html.erb (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_data.html.erb (35.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/data.js.erb (37.6ms)
+Completed 200 OK in 61ms (Views: 40.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rails/db/tables/funding_events/data" for 73.97.202.120 at 2018-03-12 06:00:50 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"funding_events"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "funding_events"[0m
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/shared/_exp_col.html.erb (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (9.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (7.7ms)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT  "funding_events".* FROM "funding_events" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_sql.html.erb (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_data.html.erb (44.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/data.js.erb (46.6ms)
+Completed 200 OK in 69ms (Views: 49.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rails/db/tables/funding_events/data" for 73.97.202.120 at 2018-03-12 06:00:51 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"funding_events"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "funding_events"[0m
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/shared/_exp_col.html.erb (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (9.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (7.6ms)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT  "funding_events".* FROM "funding_events" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_sql.html.erb (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_data.html.erb (45.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/data.js.erb (47.7ms)
+Completed 200 OK in 71ms (Views: 50.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rails/db/tables/likes/data" for 73.97.202.120 at 2018-03-12 06:00:52 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"likes"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes"[0m
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/shared/_exp_col.html.erb (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (14.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (6.2ms)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_sql.html.erb (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_data.html.erb (43.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/data.js.erb (46.4ms)
+Completed 200 OK in 69ms (Views: 49.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rails/db/tables/products/data" for 73.97.202.120 at 2018-03-12 06:00:52 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"products"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/shared/_exp_col.html.erb (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (12.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (11.3ms)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_sql.html.erb (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/_data.html.erb (61.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/rails_db-1.6.0/app/views/rails_db/tables/data.js.erb (64.1ms)
+Completed 200 OK in 89ms (Views: 67.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products/new" for 73.97.202.120 at 2018-03-12 06:00:57 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (9.8ms)
+  Rendered products/new.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `/' for :false:Symbol):
+    52:   </div>
+    53: 
+    54:   <div class="field">
+    55:     <%= form.label :false/true %>
+    56:     <%= form.text_field :false/true, id: :product_false/true %>
+    57:   </div>
+    58: 
+  
+app/views/products/_form.html.erb:55:in `block in _app_views_products__form_html_erb___4566818320791475138_69985899807820'
+app/views/products/_form.html.erb:1:in `_app_views_products__form_html_erb___4566818320791475138_69985899807820'
+app/views/products/new.html.erb:3:in `_app_views_products_new_html_erb__3043804266210706675_69985899915280'
+Started GET "/products/new" for 73.97.202.120 at 2018-03-12 06:01:53 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (9.0ms)
+  Rendered products/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 73.97.202.120 at 2018-03-12 06:01:56 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 73.97.202.120 at 2018-03-12 06:03:45 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/new" for 73.97.202.120 at 2018-03-12 06:05:23 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (7.0ms)
+  Rendered products/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 41ms (Views: 29.2ms | ActiveRecord: 0.5ms)
+
+
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /home/ec2-user/environment/likelionslectur/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /home/ec2-user/environment/likelionslectur/config/initializers/new_framework_defaults.rb:21)
+Started GET "/products" for 73.97.202.120 at 2018-03-12 06:08:59 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x007f4db921a058>):
+  
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /home/ec2-user/environment/likelionslectur/config/initializers/new_framework_defaults.rb:21)
+Started GET "/products" for 73.97.202.120 at 2018-03-12 06:12:55 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/products" for 73.97.202.120 at 2018-03-12 06:12:59 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/products" for 73.97.202.120 at 2018-03-12 06:13:05 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/products/index" for 73.97.202.120 at 2018-03-12 06:13:13 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/products/index"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/products/" for 73.97.202.120 at 2018-03-12 06:13:18 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /home/ec2-user/environment/likelionslectur/config/initializers/new_framework_defaults.rb:21)
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:14:03 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:14:41 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 5ms (Views: 3.6ms)
+
+
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:14:45 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 5ms (Views: 4.3ms)
+
+
+Started GET "/products" for 73.97.202.120 at 2018-03-12 06:14:52 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 7ms
+
+
+  
+SyntaxError (/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:44: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+.append=( if user_signed_in? );@output_buffer.safe_append='
+                              ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:46: syntax error, unexpected keyword_else, expecting ')'
+'.freeze; else 
+              ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:49: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:56: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/products/index.html.erb:44: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/products/index.html.erb:46: syntax error, unexpected keyword_else, expecting ')'
+app/views/products/index.html.erb:49: syntax error, unexpected keyword_end, expecting ')'
+app/views/products/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/products/index.html.erb:56: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/products" for 73.97.202.120 at 2018-03-12 06:15:03 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x007f4db98a3ca8>):
+  
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/products" for 73.97.202.120 at 2018-03-12 06:16:03 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x007f4db90d8398>):
+  
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:16:54 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/products" for 73.97.202.120 at 2018-03-12 06:16:59 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:18:23 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:18:55 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x007f4db9289570>):
+  
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:20:13 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 7ms
+
+
+  
+SyntaxError (/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:44: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+.append=( if user_signed_in? );@output_buffer.safe_append='
+                              ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:46: syntax error, unexpected keyword_else, expecting ')'
+'.freeze; else 
+              ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:49: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:56: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/products/index.html.erb:44: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/products/index.html.erb:46: syntax error, unexpected keyword_else, expecting ')'
+app/views/products/index.html.erb:49: syntax error, unexpected keyword_end, expecting ')'
+app/views/products/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/products/index.html.erb:56: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:20:25 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x007f4dba2b5f98>):
+  
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:22:06 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x007f4db91cf0f8>):
+  
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:22:21 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x007f4dba1fb6c0>):
+  
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /home/ec2-user/environment/likelionslectur/config/initializers/new_framework_defaults.rb:21)
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:22:48 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (1.0ms)
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:44: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+.append=( if user_signed_in? );@output_buffer.safe_append='
+                              ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:46: syntax error, unexpected keyword_else, expecting ')'
+'.freeze; else 
+              ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:49: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:56: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/products/index.html.erb:44: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/products/index.html.erb:46: syntax error, unexpected keyword_else, expecting ')'
+app/views/products/index.html.erb:49: syntax error, unexpected keyword_end, expecting ')'
+app/views/products/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/products/index.html.erb:56: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:23:04 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (1.1ms)
+Completed 401 Unauthorized in 6ms
+
+
+  
+SyntaxError (/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:44: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+.append=( if user_signed_in? );@output_buffer.safe_append='
+                              ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:46: syntax error, unexpected keyword_else, expecting ')'
+'.freeze; else 
+              ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:49: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:56: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/products/index.html.erb:44: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/products/index.html.erb:46: syntax error, unexpected keyword_else, expecting ')'
+app/views/products/index.html.erb:49: syntax error, unexpected keyword_end, expecting ')'
+app/views/products/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/products/index.html.erb:56: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:23:13 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (1.0ms)
+Completed 401 Unauthorized in 4ms
+
+
+  
+SyntaxError (/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:44: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+.append=( if user_signed_in? );@output_buffer.safe_append='
+                              ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:46: syntax error, unexpected keyword_else, expecting ')'
+'.freeze; else 
+              ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:49: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:56: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/products/index.html.erb:44: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/products/index.html.erb:46: syntax error, unexpected keyword_else, expecting ')'
+app/views/products/index.html.erb:49: syntax error, unexpected keyword_end, expecting ')'
+app/views/products/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/products/index.html.erb:56: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:23:42 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (1.0ms)
+Completed 401 Unauthorized in 9ms
+
+
+  
+SyntaxError (/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:44: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+.append=( if user_signed_in? );@output_buffer.safe_append='
+                              ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:46: syntax error, unexpected keyword_else, expecting ')'
+'.freeze; else 
+              ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:49: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/ec2-user/environment/likelionslectur/app/views/products/index.html.erb:56: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/products/index.html.erb:44: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/products/index.html.erb:46: syntax error, unexpected keyword_else, expecting ')'
+app/views/products/index.html.erb:49: syntax error, unexpected keyword_end, expecting ')'
+app/views/products/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/products/index.html.erb:56: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:24:06 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 241ms (Views: 240.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 73.97.202.120 at 2018-03-12 06:24:24 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 70ms (Views: 48.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/new" for 73.97.202.120 at 2018-03-12 06:24:27 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (7.5ms)
+  Rendered products/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 39ms (Views: 27.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up" for 73.97.202.120 at 2018-03-12 06:24:29 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 73.97.202.120 at 2018-03-12 06:25:23 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 73.97.202.120 at 2018-03-12 06:25:33 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d/0J2X8FgLG6HvQQLrrbLDYz2dQ21xEwXrcDuHVtsLFBk1qgswZm8CDyI8SuPmMPuQRlNB5O1zxD4dGA8MqoBA==", "user"=>{"email"=>"hwak26@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hwak26@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "hwak26@gmail.com"], ["encrypted_password", "$2a$11$w3fUr04iB7X3gS34r7TZleawc.JSgx5uJt1U8DLqTzA74OQSs8M.K"], ["created_at", "2018-03-12 06:25:33.619960"], ["updated_at", "2018-03-12 06:25:33.619960"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-03-12 06:25:33.628374"], ["last_sign_in_at", "2018-03-12 06:25:33.628374"], ["current_sign_in_ip", "73.97.202.120"], ["last_sign_in_ip", "73.97.202.120"], ["updated_at", "2018-03-12 06:25:33.629276"], ["id", 1]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://a86dc861c7c445b0a14e2cf25bc235a7.vfs.cloud9.us-west-2.amazonaws.com/
+Completed 302 Found in 189ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/" for 73.97.202.120 at 2018-03-12 06:25:33 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for 73.97.202.120 at 2018-03-12 06:25:35 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (5.7ms)
+  Rendered products/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 73.97.202.120 at 2018-03-12 06:25:58 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O+MEtpchS/wd/3ojbR27Grgt3hrH7qRj2xOciNZDfcPccTHuGzP11UuCTieqa1vjRAI9SIxM4/6sZDMk/MpuDg==", "product"=>{"user"=>"hwak", "name"=>"this is my product", "likes"=>"", "description"=>"what do you think about my product", "images"=>"", "video"=>"", "category"=>"", "funding"=>"1", "goal_amount"=>"$100", "due_date(1i)"=>"2018", "due_date(2i)"=>"3", "due_date(3i)"=>"12", "due_date(4i)"=>"06", "due_date(5i)"=>"25"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "products" ("user", "name", "description", "images", "video", "category", "funding", "goal_amount", "due_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user", "hwak"], ["name", "this is my product"], ["description", "what do you think about my product"], ["images", ""], ["video", ""], ["category", ""], ["funding", "t"], ["goal_amount", 0.0], ["due_date", "2018-03-12 06:25:00"], ["created_at", "2018-03-12 06:25:58.132850"], ["updated_at", "2018-03-12 06:25:58.132850"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://a86dc861c7c445b0a14e2cf25bc235a7.vfs.cloud9.us-west-2.amazonaws.com/products/1
+Completed 302 Found in 13ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/products/1" for 73.97.202.120 at 2018-03-12 06:25:58 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 73.97.202.120 at 2018-03-12 06:26:00 +0000
+Cannot render console from 73.97.202.120! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
