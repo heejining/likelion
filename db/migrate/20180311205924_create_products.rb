@@ -3,7 +3,7 @@ class CreateProducts < ActiveRecord::Migration[5.1]
     create_table :products do |t|
       t.string :user
       t.string :name
-      t.integer :likes
+      t.integer :likes, :default => 0
       t.string :description
       t.string :images
       t.string :video

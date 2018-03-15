@@ -17,14 +17,10 @@
   </div>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :Title %>
     <%= form.text_field :name, id: :product_name %>
   </div>
 
-  <div class="field">
-    <%= form.label :likes %>
-    <%= form.number_field :likes, id: :product_likes %>
-  </div>
 
   <div class="field">
     <%= form.label :description %>
@@ -43,23 +39,40 @@
 
   <div class="field">
     <%= form.label :category %>
-    <%= form.text_field :category, id: :product_category %>
+    <%= form.collection_select :id, Category.order(:name), :id,:name, include_blank: true %>
   </div>
 
-  <div class="field">
-    <%= form.label :funding %>
-    <%= form.check_box :funding, id: :product_funding %>
-  </div>
 
-  <div class="field">
-    <%= form.label :goal_amount %>
-    <%= form.text_field :goal_amount, id: :product_goal_amount %>
-  </div>
+  <%= form.label :funding %>
+  <%= form.check_box :funding, id: :product_funding %>
 
-  <div class="field">
-    <%= form.label :due_date %>
-    <%= form.datetime_select :due_date, id: :product_due_date %>
+  <div id="fundingForms">
+    <div class="field">
+      <%= form.label :goal_amount %>
+      <%= form.text_field :goal_amount, id: :product_goal_amount %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :due_date %>
+      <%= form.datetime_select :due_date, id: :product_due_date %>
+    </div>
   </div>
+  
+  <script type="text/javascript">
+    var checkBox = document.getElementById('product_funding');
+    var fundingForms = document.getElementById('fundingForms');
+    checkBox.checked = true;
+    checkBox.onchange = function() {
+      if(this.checked)
+      {
+        fundingForms.style['visibility'] = 'visible';
+      }
+      else if(!this.checked)
+      {
+        fundingForms.style['visibility'] = 'hidden';
+      }
+    }
+  </script>
 
   <div class="actions">
     <%= form.submit %>
