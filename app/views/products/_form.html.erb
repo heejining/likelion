@@ -11,25 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :user %>
-    <%= form.text_field :user, id: :product_user %>
-  </div>
+  <!--<div class="field">-->
+  <!--  <%= form.label :user %>-->
+  <!--  <%= form.text_field :user, id: :product_user %>-->
+  <!--</div>-->
+  
+  <!-- Retrieve user's id and send it -->
+  <%= form.hidden_field :user_id, value: current_user.id %>
 
   <div class="field">
     <%= form.label :Title %>
-    <%= form.text_field :name, id: :product_name %>
+    <%= form.text_field :name, id: :product_name, required: true %>
   </div>
 
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_field :description, id: :product_description %>
+    <%= form.text_field :description, id: :product_description, required: true %>
   </div>
 
   <div class="field">
     <%= form.label :images %>
     <%= form.text_field :images, id: :product_images %>
+      <div class="field">
   </div>
 
   <div class="field">
@@ -39,7 +43,7 @@
 
   <div class="field">
     <%= form.label :category %>
-    <%= form.collection_select :id, Category.order(:name), :id,:name, include_blank: true %>
+    <%= form.collection_select :category, Category.order(:name), :id,:name, include_blank: false, required: true %>
   </div>
 
 
