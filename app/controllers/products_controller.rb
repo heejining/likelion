@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     respond_to do |format|
-      if @product.save
+       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
       else
         format.html { render :new }
@@ -35,17 +35,36 @@ class ProductsController < ApplicationController
 
   # PATCH/PUT /products/1
   def update
+    respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
       else
        render :edit 
       end
+    end
   end
 
   # DELETE /products/1
   def destroy
     @product.destroy
       redirect_to products_url, notice: 'Product was successfully destroyed.' 
+  end
+
+  ## TODO - Move this to contact controller
+  def send_contact_email
+    contact_email = params[:contact_email]
+    contact_message = params[:contact_message]
+    UserMailer.contact_email(contact_email, contact_message).deliver_later
+    
+    redirect_to products_path
+  end
+  
+  def liked
+    @product = Product.find(params[:product_id])
+    
+    logger.debug params[:product_id]
+    @product.likes += 1
+    @product.save
   end
 
   private

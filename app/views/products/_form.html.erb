@@ -32,8 +32,7 @@
 
   <div class="field">
     <%= form.label :images %>
-    <%= form.text_field :images, id: :product_images %>
-      <div class="field">
+    <%= form.file_field :images, id: :product_images %>
   </div>
 
   <div class="field">
@@ -81,4 +80,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+  
 <% end %>

@@ -7,6 +7,9 @@ end
 
 gem 'cancancan'
 gem 'rolify'
+gem 'carrierwave'
+gem 'mini_magick', '~> 4.3'
+gem 'fog-aws'
 
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -22,7 +22,7 @@
 
 <p>
   <strong>Images:</strong>
-  <%= @product.images %>
+  <%= image_tag(@product.images.url, alt: 'Image') if @product.images? %>
 </p>
 
 <p>

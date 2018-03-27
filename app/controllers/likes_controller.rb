@@ -1,6 +1,39 @@
 class LikesController < ApplicationController
   before_action :set_like, only: [:show, :edit, :update, :destroy]
 
+  # GET /likes/:product_id
+  def like
+    #see if record exists in table
+    like = Like.where(user_id: current_user.id).where(product_id: params[:product_id])
+    
+    if(like.present?)
+      #user already liked
+      #delete record
+      puts 'Test----------------------------------------'
+    else
+      #user have not liked before
+      puts 'Test222----------------------------------------'
+      like = Like.new
+      like.product_id = params[:product_id]
+      like.user_id = current_user.id
+      like.save
+    end
+  end
+  
+    # DELETE /likes/1
+  # DELETE /likes/1.json
+  # def unlike
+
+    
+    # like = Like.where(user_id: current_user.id).where(product_id: params[:product_id])
+    # like.destroy
+    # @like.destroy
+    # respond_to do |format|
+    #   format.html { redirect_to likes_url, notice: 'Like was successfully destroyed.' }
+    #   format.json { head :no_content }
+    # end
+
+
   # GET /likes
   # GET /likes.json
   def index
@@ -51,15 +84,7 @@ class LikesController < ApplicationController
     end
   end
 
-  # DELETE /likes/1
-  # DELETE /likes/1.json
-  def destroy
-    @like.destroy
-    respond_to do |format|
-      format.html { redirect_to likes_url, notice: 'Like was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
