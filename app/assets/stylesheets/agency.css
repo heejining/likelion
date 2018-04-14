@@ -1,7 +1,7 @@
 body {
   overflow-x: hidden;
   font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: rgba(247, 249, 249, 0.4);
+  background-color: rgba(240,240,240, 0.5);
   background-position: center;
   background-size: cover;
   height: 100%; }
@@ -15,10 +15,38 @@ p {
   color: #fed136 !important;
 }
 
-h1,
-h2,
-h3,
+/*product of the day,main page*/
+h1   {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #7B7D7D;  
+  font-size: 15px;
+  text-align: left;
+  padding-bottom: 50px;
+  
+}
+
+/*signincard title*/
+
+h2  {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #7B7D7D;  
+  opacity: 80%;
+  font-size: 10px;
+  text-align: left;
+  padding-bottom: 25px;
+}
+
+ /*signincard content*/
+h3,{
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #7B7D7D;  
+  font-size: 10px;
+  text-align: left;
+  padding-bottom: 25px;
+}
+
 h4,
+
 h5,
 h6 {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -114,7 +142,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-brand {
-  color: rgb (179, 182, 183);
+  color: rgb(179, 182, 183);
   font-size: 20px;
   font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
   left: 50%;
@@ -181,6 +209,8 @@ header.masthead .intro-text .intro-heading {
 #portfolio .portfolio-item .portfolio-link {
   position: relative;
   display: block;
+  max-width: 400px;
+  max-height: 800px;
   margin: 0 auto;
   cursor: pointer;
 }
@@ -260,25 +290,95 @@ header.masthead .intro-text .intro-heading {
   border-radius: 5px;
 }
 
+.portfolio-modal-img  {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+
 .portfolio-modal .modal-dialog {
   margin: 1rem;
   max-width: 100vw;
 }
 
 .portfolio-modal .modal-content {
-  padding: 100px ;
+  padding: 50px ;
   text-align: center;
   display: inline-block;
   vertical-align: middle;
 }
 
+.portfolio-modal .modal-content h1 {
+  font-size: 24px;
+  color: 	#505050;
+  text-transform: uppercase;
+  display: block;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #273746;
+}
+
 .portfolio-modal .modal-content h2 {
-  font-size: 3em;
-  margin-bottom: 15px;
+  font-size: 12px;
+  color: #839192;
+  text-transform: uppercase;
+  padding-bottom: 0px;
+}
+
+.portfolio-modal .modal-content h3 {
+  font-size: 15px;
+  color: 	#505050;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  text-align: left;
+  display: block;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #839192;
+}
+
+.portfolio-modal .modal-content h4 {
+  font-size: 14px;
+  color: #839192;
+  padding-bottom: 0px;
+  text-align: left;
+}
+
+.portfolio-modal .modal-content h5 {
+  font-size: 20px;
+  color: #273746  ;
+  margin-bottom: 3px;
+  text-transform: capitalize;
+  text-align: left;
+  display: block;
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #273746;
+}
+
+.portfolio-modal .modal-content h6 {
+  font-size: 10px;
+  color: #273746;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  text-align: left;
 }
 
 .portfolio-modal .modal-content p {
   margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content li {
+  font-size: 15px;
+  margin-bottom: 3px;
+  text-align: left;
 }
 
 .portfolio-modal .modal-content p.item-intro {
@@ -291,14 +391,20 @@ header.masthead .intro-text .intro-heading {
 .portfolio-modal .modal-content ul.list-inline {
   margin-top: 0;
   margin-bottom: 30px;
+  text-align: left;
 }
 
 .portfolio-modal .modal-content img {
-  margin-bottom: 30px;
+  margin: auto;
+  display: block;
+  min-width: 500px;
 }
 
 .portfolio-modal .modal-content button {
   cursor: pointer;
+  background-color: white;
+    color: #273746;
+    border: 1px solid #273746;
 }
 
 .portfolio-modal .close-modal {
@@ -708,17 +814,16 @@ input[type=text], select, textarea {
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
+    background-color: #F2F3F4;
+    color: #909497;
+    padding: 5px 10px;
+    border: solid 1px #F2F3F4;
     cursor: pointer;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #F2F3F4;
 }
 
 /*aboutus*/
@@ -778,4 +883,77 @@ input[type=submit]:hover {
     color: #B3B6B7 ;
     text-decoration: none;
 
+}
+
+
+/*sign in page */
+.signincard  {
+  background-color: 	rgba(250,250,250) ;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(125, 125, 125, 0.1);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 15px;
+  margin-top: 50px;
+  width: 40%;
+}
+
+.signincard_account  {
+  background-color: 	rgba(250,250,250) ;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(125, 125, 125, 0.1);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 15px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.signincard h1 {
+  font-size: 15px;
+  color: #606060 ;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.signincard h2 {
+  font-size: 12px;
+  color: #606060 ;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.signincard blankbox {
+  float: left;
+  width: 50%;
+  margin-bottom: 16px;
+  margin-left:50px;
+}
+
+
+.signincard columns {
+  float: left;
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.form-control  {
+  height: 100px;
+  width: 350px;
+}
+
+#inputbox  {
+  background-color: black;
+}
+
+.dollar:before {
+    content: '$';
+}
+
+.dollar:after {
+    content: '.00';
 }

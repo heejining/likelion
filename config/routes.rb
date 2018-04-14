@@ -22,9 +22,12 @@ Rails.application.routes.draw do
   # get '/contact_email' => 'products#send_contact_email'
   get '/contact_email' => 'contactform#contactform'
   post '/contact_email' => 'contactform#send_contact_email'
-  #get '/liked/:product_id' => 'products#liked'
+  post '/likes/:product_id' => 'likes#like'
+  delete '/products/:product_id' => 'products#destroy'
   get 'liked/:product_id' => 'likes#like'
   get '/myaccount' => 'myaccount#myaccount'
   get '/aboutus' => 'aboutus#aboutus'
+  get '/useraccount/:user_id' => 'useraccount#useraccount'
+  get '/categories/:category_id' => 'categories#show'
   
 end

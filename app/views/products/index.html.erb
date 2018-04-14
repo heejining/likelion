@@ -3,21 +3,22 @@
     <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase"> Products of the day...</h2>
+        <h1 class="section-heading text-uppercase"> Products of the day...</h1>
         <!--<h3 class="section-subheading text-muted"> filter </h3>-->
       </div>
     </div>
       <div class="row">
         <% @products.each do |product| %>
           <!--< if product.category == 4 %>-->
-            <div class="col-md-3 col-sm-6 portfolio-item" style="padding:0px">
-              <a class="portfolio-link" data-toggle="modal" id="product-modal-button-<%= product.id %>" href="#product-modal-<%= product.id%>" data-product-id="@product.id">
+            <div class="col-md-4 col-sm-6 portfolio-item">
+              <a class="portfolio-link card-img-top" data-toggle="modal" id="product-modal-button-<%= product.id %>" href="#product-modal-<%= product.id%>" data-product-id="@product.id">
                 <div class="portfolio-hover">
                   <div class="portfolio-hover-content">
                     <i class="fa fa-plus fa-3x"></i>
                   </div>
                 </div>
-                <%= image_tag(product.images.url, alt: 'Image', class: "portfolio-img") if product.images? %>
+                <%= image_tag(product.images.url, alt: 'Image', class: "image-crop", style:"size:500px;") if product.images? %>
+                <!--<%= video_tag(product.video.url, alt: 'Video', class: "card-img-top") if product.video? %>-->
               </a>
               <div class="portfolio-caption">
                 <h4><%= product.name %></h4>
@@ -56,27 +57,71 @@
               <div class="row">
                 <div class="col-lg-8 mx-auto">
                   <div class="modal-body">
+                    
                     <div class="modal-body ativa-scroll">
-                      <%= image_tag(product.images.url, size: "500x500", alt: 'Image') if product.images? %>
-                      <h2 class="text-uppercase"><%= product.name %></h2>
-                      <p class="item-intro text-muted"><%= product.description %></p>
+                      <%= image_tag(product.images.url, size: "100%", alt: 'Image', class: "portfolio-modal-img") if product.images? %>
+                      <!--<%= video_tag(product.video.url, size: "240x480", autoplay: :autoplay, loop: :loop, muted: :muted) if product.video? %>-->
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 mx-auto">
+                <div class="col-lg-3 mx-auto">
                   <div class="modal-body">
-                      <ul class="list-inline">
-                        <%= Like.count %>
-                        <!--< if(Like.present?)%>-->
-                          <!--<button id="unlike" onclick="unlike(<= product.id %>)"> Unlike </button>-->
-                        <!--< else %>-->
-                          <button id="like" onclick="like(<%= product.id %>)">Like</button>
-                        <!--< end %>-->
-                        <br>
-                        <li><%= time_ago_in_words(product.created_at) %></li>
-                        <li>User: <%= product.user.email %></li>
-                        <li>Category: <%= Category.find(product.category).name %></li>
-                      </ul>
+                        </br>
+                        <h1><%= product.name %></h1>
+                          <h2>posted by <i> <a href="/useraccount/<%= product.user.id %>"> <%= product.user.email %> </a></i></a> </br>
+                            <i><%= time_ago_in_words(product.created_at) %></i> ago
+                            in <i><%= Category.find(product.category).name %></i></h2>
+                        
+                        <h3 style="padding-top: 30px">Description</h3>
+                          <h4><i class="item-intro text-muted" style="undercase"><%= product.description %></i></h4>
+                        
+                        <% if product.funding %>
+                          <h3 style="padding-top: 30px">Funding Status</h3>
+                          <% funding_events = FundingEvent.where(product_id: product.id) %>
+                          <% raised_amount = funding_events.sum('amount') %>
+                          <% goal_amount = Product.find(product.id).goal_amount %>
+                          
+                          <h2><i class="dollar"> <%= raised_amount.to_i %> USD </i> raised by <i><%= funding_events.distinct.pluck(:user_id).count() %> users</i></h2>
+                          <h2><i class="dollar"> <%= goal_amount.to_i - raised_amount.to_i %></i> USD of <i class="dollar"><%= goal_amount.to_i %></i> goal </h2>
+                          <h2 style="padding-top: 15px"> since <i> <%= time_ago_in_words(product.created_at) %></i> ago</h2></br>
+                        <% end %>
+
+                      
+                        <%= Product.find(product.id).likes.count %>
+                        <% if user_signed_in? %>
+                          
+                          <script>
+                            var likedState = false;
+                            likedState = <%= Like.where(product_id: product.id, user_id: current_user.id).length > 0 %>
+                            
+                            function flipState() {
+                              
+                              if (likedState) {
+                                $("#like")[0].style.display = "inline";
+                                $("#unlike")[0].style.display = "none";
+                              }
+                              else {
+                                $("#like")[0].style.display = "none";
+                                $("#unlike")[0].style.display = "inline";
+                              }
+                              likedState = !likedState;
+                            }
+                          </script>
+                          
+                          <% if (Like.where(product_id: product.id, user_id: current_user.id).length > 0) %>
+                            <button id="unlike" onclick="like(<%= product.id %>)"> Unlike </button>
+                            <button id="like" style="display: none;" onclick="like(<%= product.id %>)">Like</button>
+                          <% else %>
+                            <button id="unlike" style="display: none;" onclick="like(<%= product.id %>)"> Unlike </button>
+                            <button id="like" onclick="like(<%= product.id %>)">Like</button>
+                          <% end %>
+                        
+                           <form id="get_event">
+                            <input type='button' onclick="submitFrmAjax();" value="Fund">
+                           </form>
+                        <% end %>
+                      </div>
+
                   </div>
                 </div>
               </div>
@@ -98,15 +143,62 @@
 
     <!-- Custom scripts for this template -->
     <!--<script src="js/agency.min.js"></script>-->
+  <script>
+  function like(product_id) {
+    <% if user_signed_in? %>
+        
+          var csrf_param = $("head meta[name='csrf-param']")[0].content;
+          var csrf_token = $("head meta[name='csrf-token']")[0].content;
+        
+            $.ajax({
+                url : `/likes/${product_id}`,
+                type : "post",
+                data : {
+                    product_id: product_id,
+                    [csrf_param]: csrf_token
+                },
+                success: function(data) {
+                   console.log(data); 
+                }
+            });
+          
+          flipState();
+    <% end %>
+  }
+  </script>
 
+    
     <script>
-      function like(id) {
-        $.ajax({
-          url: "/liked/"+id,
-          type: "get"
-        })
+      // document.getElementById("unlike").addEventListener("click", unlike)
+      // document.getElementById("like").addEventListener("click", like)
+      
+      // function unlike() {
+      //   document.getElementById("like").style.visibility = "visible";
+      //   document.getElementById("unlike").style.visibility = "hidden";
+      // }
+      
+      // function like() {
+      //   document.getElementById("like").style.visibility = "hidden";
+      //   document.getElementById("unlike").style.visibility = "visible";
+      // }
+    
+      function fund(id) {
+        document.getElementById("fund").innerHTML = "Hello World";
       }
     </script>
+\
+
+    
+    
+    <script>
+    
+    // function left_amount(id)
+    //   {
+    //     var raised_amount;
+    //     var goal_amount;
+    //     var left_amount = goal_amount - raised_amount;
+    //   }
+    // </script>
     
 <!--<h1>Products</h1>-->
 
@@ -156,5 +248,3 @@
 <!-- <%= link_to 'Sign in', new_user_session_path %>-->
 <!-- <%= link_to 'Sign up',  new_user_registration_path %>-->
 <!--<% end %>-->
-
-

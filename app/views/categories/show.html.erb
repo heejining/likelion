@@ -1,9 +1,228 @@
-<p id="notice"><%= notice %></p>
+<body>
+  <section class="bg-light" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <% @products.each do |product| %>
+          <!--< if product.category == 4 %>-->
+            <div class="col-md-4 col-sm-6 portfolio-item">
+              <a class="portfolio-link card-img-top" data-toggle="modal" id="product-modal-button-<%= product.id %>" href="#product-modal-<%= product.id%>" data-product-id="@product.id">
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content">
+                    <i class="fa fa-plus fa-3x"></i>
+                  </div>
+                </div>
+                <%= image_tag(product.images.url, alt: 'Image', class: "image-crop", style:"size:500px;") if product.images? %>
+                <!--<%= video_tag(product.video.url, alt: 'Video', class: "card-img-top") if product.video? %>-->
+              </a>
+              <div class="portfolio-caption">
+                <h4><%= product.name %></h4>
+                <p class="text-muted"><%= product.user.email %></p>
+                <p class="text-muted"><%= Category.find(product.category).name %></p>
+              </div>
+            </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Portfolio Modals -->
+  
+  <script type="text/javascript">
+    $(document).ready(ajustamodal);
+    $(window).resize(ajustamodal);
+    function ajustamodal() {
+      var altura = $(window).height() - 155; //value corresponding to the modal heading + footer
+      $(".ativa-scroll").css({"height":altura,"overflow-y":"auto"});
+    }
+  </script>
+  
+  <% @products.each do |product| %>
+      <div class="portfolio-modal modal fade" id="product-modal-<%= product.id %>" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"></div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 mx-auto">
+                  <div class="modal-body">
+                    
+                    <div class="modal-body ativa-scroll">
+                      <%= image_tag(product.images.url, size: "100%", alt: 'Image', class: "portfolio-modal-img") if product.images? %>
+                      <!--<%= video_tag(product.video.url, size: "240x480", autoplay: :autoplay, loop: :loop, muted: :muted) if product.video? %>-->
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 mx-auto">
+                  <div class="modal-body">
+                        </br>
+                        <h1><%= product.name %></h1>
+                          <h2>posted by <i> <a href="/useraccount/<%= product.user.id %>"> <%= product.user.email %> </a></i></a> </br>
+                            <i><%= time_ago_in_words(product.created_at) %></i> ago
+                            in <i><%= Category.find(product.category).name %></i></h2>
+                        
+                        <h3 style="padding-top: 30px">Description</h3>
+                          <h4><i class="item-intro text-muted" style="undercase"><%= product.description %></i></h4>
+                        
+                        <% if product.funding %>
+                          <h3 style="padding-top: 30px">Funding Status</h3>
+                          <% funding_events = FundingEvent.where(product_id: product.id) %>
+                          <% raised_amount = funding_events.sum('amount') %>
+                          <% goal_amount = Product.find(product.id).goal_amount %>
+                          
+                          <h2><i class="dollar"> <%= raised_amount.to_i %> USD </i> raised by <i><%= funding_events.distinct.pluck(:user_id).count() %> users</i></h2>
+                          <h2><i class="dollar"> <%= goal_amount.to_i - raised_amount.to_i %></i> USD of <i class="dollar"><%= goal_amount.to_i %></i> goal </h2>
+                          <h2 style="padding-top: 15px"> since <i> <%= time_ago_in_words(product.created_at) %></i> ago</h2></br>
+                        <% end %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+                      
+                        <%= Product.find(product.id).likes.count %>
+                        <% if user_signed_in? %>
+                          
+                          <% if (Like.present?) %>
+                            <button id="unlike" onclick="like(<%= product.id %>)"> Unlike </button>
+                          <% else %>
+                            <button id="like" onclick="like(<%= product.id %>)">Like</button>
+                          <% end %>
+                          
+                          <%= link_to 'new_funding_event', '/funding_events/new', id: '#top' %>
+                          <%= link_to 'new_funding_event', '/funding_events/new', id: '#top' %>
+                          <a href="/funding_events/new" onclick="paintIt(this, '#990000')">Paint it red</a>
+                           
+                           <form id="get_event">
+                            <input type='button' onclick="submitFrmAjax();" value="Fund">
+                           </form>
+                        <% end %>
+                      </div>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <% end %>
+</body>
+    
+    <!--<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+
+    <!-- Plugin JavaScript -->
+    <!--<script src="vendor/jquery-easing/jquery.easing.min.js"></script>-->
+
+    <!-- Contact form JavaScript -->
+    <!--<script src="js/jqBootstrapValidation.js"></script>-->
+    <!--<script src="js/contact_me.js"></script>-->
+
+    <!-- Custom scripts for this template -->
+    <!--<script src="js/agency.min.js"></script>-->
+  <script>
+  function like(product_id) {
+    <% if user_signed_in? %>
+        
+          var csrf_param = $("head meta[name='csrf-param']")[0].content;
+          var csrf_token = $("head meta[name='csrf-token']")[0].content;
+        
+            $.ajax({
+                url : `/likes/${product_id}`,
+                type : "post",
+                data : {
+                    product_id: product_id,
+                    [csrf_param]: csrf_token
+                },
+                success: function(data) {
+                   console.log(data); 
+                }
+            });
+            
+          var likeElement = $("#unlike")
+    <% end %>
+  }
+  </script>
+
+    
+    <script>
+      // document.getElementById("unlike").addEventListener("click", unlike)
+      // document.getElementById("like").addEventListener("click", like)
+      
+      // function unlike() {
+      //   document.getElementById("like").style.visibility = "visible";
+      //   document.getElementById("unlike").style.visibility = "hidden";
+      // }
+      
+      // function like() {
+      //   document.getElementById("like").style.visibility = "hidden";
+      //   document.getElementById("unlike").style.visibility = "visible";
+      // }
+    
+      function fund(id) {
+        document.getElementById("fund").innerHTML = "Hello World";
+      }
+    </script>
+\
+
+    
+    
+    <script>
+    
+    // function left_amount(id)
+    //   {
+    //     var raised_amount;
+    //     var goal_amount;
+    //     var left_amount = goal_amount - raised_amount;
+    //   }
+    // </script>
+    
+<!--<h1>Products</h1>-->
+
+<!--<table>-->
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th>User</th>-->
+<!--      <th>Title</th>-->
+<!--      <th>Likes</th>-->
+<!--      <th>Description</th>-->
+<!--      <th>Images</th>-->
+<!--      <th>Video</th>-->
+<!--      <th>Category</th>-->
+<!--      <th>Funding</th>-->
+<!--      <th>Goal amount</th>-->
+<!--      <th>Due date</th>-->
+<!--      <th colspan="3"></th>-->
+<!--    </tr>-->
+<!--  </thead>-->
+
+<!--  <tbody>-->
+<!--    <% @products.each do |product| %>-->
+<!--      <tr>-->
+<!--        <td><%= product.user %></td>-->
+<!--        <td><%= product.name %></td>-->
+<!--        <td><%= product.likes %></td>-->
+<!--        <td><%= product.description %></td>-->
+<!--        <td><%= product.images %></td>-->
+<!--        <td><%= product.video %></td>-->
+<!--        <td><%= product.category %></td>-->
+<!--        <td><%= product.funding %></td>-->
+<!--        <td><%= product.goal_amount %></td>-->
+<!--        <td><%= product.due_date %></td>-->
+<!--        <td><%= link_to 'Show', product %></td>-->
+<!--        <td><%= link_to 'Edit', edit_product_path(product) %></td>-->
+<!--        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+<!--      </tr>-->
+<!--    <% end %>-->
+<!--  </tbody>-->
+<!--</table>-->
+
+
+<!--<% if user_signed_in? %>-->
+<!--  <%= link_to 'Sign out',  destroy_user_session_path, method: 'delete' %>-->
+<!--  <%= link_to 'New Product', new_product_path %>-->
+<!--<% else %>-->
+<!-- <%= link_to 'Sign in', new_user_session_path %>-->
+<!-- <%= link_to 'Sign up',  new_user_registration_path %>-->
+<!--<% end %>-->

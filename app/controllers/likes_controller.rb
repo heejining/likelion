@@ -1,15 +1,22 @@
 class LikesController < ApplicationController
   before_action :set_like, only: [:show, :edit, :update, :destroy]
 
-  # GET /likes/:product_id
+  # POST /likes/:product_id
   def like
     #see if record exists in table
-    like = Like.where(user_id: current_user.id).where(product_id: params[:product_id])
+    like = Like.where(user_id: current_user.id).where(product_id: params[:product_id]).first
     
     if(like.present?)
       #user already liked
       #delete record
       puts 'Test----------------------------------------'
+      like.destroy
+      #update product like number
+      # product = Product.find(params[:product_id])
+      # puts "here:--------------------------" product.likes.count
+      
+      # Like.where(:user_id => current_user.id).where(product_id: params[:product_id]).destroy_all
+      # like.destroy
     else
       #user have not liked before
       puts 'Test222----------------------------------------'
@@ -17,6 +24,12 @@ class LikesController < ApplicationController
       like.product_id = params[:product_id]
       like.user_id = current_user.id
       like.save
+      
+      # product = Product.find(params[:product_id])
+      # puts "here:--------------------------" product.likes.count
+      
+      #increase like count in product
+      
     end
   end
   

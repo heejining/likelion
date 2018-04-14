@@ -4,11 +4,21 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    @products = Product.all
+    @products = Product.all.order('created_at DESC')
   end
+  
+  # def subtract
+  #   funding_events = FundingEvent.where(product_id: product.id)
+  #   raised_amount = funding_events.sum('amount')
+  #   left_amount = Product.goal_amount - raised_amount
+  # end
+    
 
   # GET /products/1
   def show
+    # @likes = Like.find_by()
+    likes_group = Like.all.group_by(&:product_id)
+    @likes = likes_group[params[:id]]
   end
 
   # GET /products/new

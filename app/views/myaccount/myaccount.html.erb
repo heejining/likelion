@@ -1,10 +1,36 @@
-<body> 
-<h2>Information</h2>
-<div class="chip">
-  <%= image_tag("lion.png", size: "100%", alt: "Image") %>
-
-  User Email
-  <br/>
-  Your Post:
+<div class="row">
+  <div class="column ">
+    <div class="signincard">
+        <h1>My info</h1>
+        
+         <p style="text-align: center;"><%= current_user.email %></p>
+        
+        
+        <br/>
+        <br/>
+        <h1>My Portfolio</h1>
+        
+         <% @products.each do |product| %>
+            <!--< if product.category == 4 %>-->
+              <div class="col-md-3 col-sm-6 portfolio-item" style="padding:0px margin:0px auto;">
+                <a class="portfolio-link" data-toggle="modal" id="product-modal-button-<%= product.id %>" href="/products/<%= product.id %>" data-product-id="@product.id">
+                  <div class="portfolio-hover">
+                    <div class="portfolio-hover-content">
+                      <i class="fa fa-plus fa-3x"></i>
+                    </div>
+                  </div>
+                  <%= image_tag(product.images.url, alt: 'Image', class: "portfolio-img") if product.images? %>
+                </a>
+                <div class="portfolio-caption">
+                  <h4><%= product.name %></h4>
+                  <p class="text-muted"><%= product.user.email %></p>
+                  <p class="text-muted"><%= Category.find(product.category).name %></p>
+                </div>
+              </div>
+        <% end %>
+        
+      </div>
+    </div>
 </div>
-</body>
+
+

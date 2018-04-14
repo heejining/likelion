@@ -25,9 +25,9 @@
   </div>
 
 
-  <div class="field">
+  <div class="field" style="width: 60px">
     <%= form.label :description %>
-    <%= form.text_field :description, id: :product_description, required: true %>
+    <%= form.text_field :description, id: :product_description, required: true, class: 'form-control', "size" => 150  %>
   </div>
 
   <div class="field">
@@ -37,7 +37,7 @@
 
   <div class="field">
     <%= form.label :video %>
-    <%= form.text_field :video, id: :product_video %>
+    <%= form.file_field :video, id: :product_video %>
   </div>
 
   <div class="field">
@@ -59,7 +59,7 @@
       <%= form.label :due_date %>
       <%= form.datetime_select :due_date, id: :product_due_date %>
     </div>
-  </div>
+</div>
   
   <script type="text/javascript">
     var checkBox = document.getElementById('product_funding');

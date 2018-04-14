@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="column ">
+    <div class="signincard" style= "width: 100%">
+        <h1>My info</h1>
+        
+        <%= current_user.email %>
+        
+        <h1>User Portfolio</h1>
+        
+         <% @products.each do |product| %>
+            <!--< if product.category == 4 %>-->
+              <div class="col-md-3 col-sm-6 portfolio-item" style="padding:0px">
+                <a class="portfolio-link" data-toggle="modal" id="product-modal-button-<%= product.id %>" href="#product-modal-<%= product.id%>" data-product-id="@product.id">
+                  <div class="portfolio-hover">
+                    <div class="portfolio-hover-content">
+                      <i class="fa fa-plus fa-3x"></i>
+                    </div>
+                  </div>
+                  <%= image_tag(product.images.url, alt: 'Image', class: "portfolio-img") if product.images? %>
+                </a>
+                <div class="portfolio-caption">
+                  <h4><%= product.name %></h4>
+                  <p class="text-muted"><%= product.user.email %></p>
+                  <p class="text-muted"><%= Category.find(product.category).name %></p>
+                </div>
+              </div>
+        <% end %>
+        
+      </div>
+    </div>
+</div>
+
+

@@ -14,3 +14,35 @@
  *= require_self
  */
 
+.card-img-top{
+
+  position: relative;
+    margin: -30% auto;/* virtualy height needed turn don to zero */
+    width: 100%;/* height will follow within image ratio */
+    height:auto;/* to overrride attribute height set in tag */
+    vertical-align:middle;/* finalise vertical centering on baseline*
+  
+
+}
+
+.image-crop{
+    display:block;
+    height:200px;
+    line-height:100px;/* set the baseline at 100px from top*/
+    overflow:hidden;/* crops/cut off */
+    
+    object-position: center; /* Center the image within the element */
+  
+}
+
+#portfolio .portfolio-item .portfolio-link{
+  max-height:300px;
+}
+
+.card{
+  width: 500px;
+}
+
+.nav-link{
+  display: inline-block !important;
+}

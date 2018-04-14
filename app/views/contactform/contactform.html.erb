@@ -1,20 +1,28 @@
-<div class="container background-img" >
-  
-  <form action="contact_email" method="post">
+<div class="row">
+  <div class="column">
+    <div class="signincard ">
+    <form action="contact_email" method="post">
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <label for="fname">Username</label>
     <input type="text" id="fname" name="firstname" placeholder="Your user name..">
     
     <br>
-
+    <label for="fname">Phone number</label>
+    <input type="text" id="fname" name="phonenumber" placeholder="Your contact number..">
+    
+    <br>
+  
     <label for="subject">Subject</label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
+    
     <input type="submit" value="Submit">
-
-  </form>
-  <script>
-      
-  </script>
-  
+    
+    </form>
+    <script>
+    
+    </script>
+    
+    </div>
+  </div>
+</div>
 </div>

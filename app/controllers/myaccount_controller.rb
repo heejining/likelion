@@ -1,7 +1,9 @@
 class MyaccountController < ApplicationController
     before_action :authenticate_user!, except: :index 
-
-    def myaccount
-       # @product = Product.find(params[:user_id])
-    end
+    
+  # GET /myaccount/products
+  def myaccount
+    @products = Product.where(user_id: current_user.id)
+  end
+  
 end

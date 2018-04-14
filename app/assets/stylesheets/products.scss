@@ -2,3 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.close-modal{
+    z-index:999;
+}
+
+.portfolio-modal .modal-content{
+    padding: 10px 50px 50px 10px !important;
+    border-radius: 15px;
+}
+.modal-body{
+    padding: 0px !important;
+}
+
+.portfolio-modal .modal-dialog {
+    margin: 5rem;
+}
+
+.modal-content h6 {
+    text-transform: capitalize !important;
+    font-size: 14px !important;
+}
